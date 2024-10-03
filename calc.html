@@ -30,6 +30,14 @@
 		#contents > div > p { margin-bottom: 10px; color: #222; font-weight: bold; font-size: 16px; }
 		#contents > div > form > p { margin-bottom: 10px; color: #222; font-weight: bold; font-size: 16px; }
 		.line { border-top: 1px dotted #cbcbcb; margin: 0px 15px; padding: 0px !important; }
+		.line2 { border-top: 1px dotted #cbcbcb; margin: 4px 15px; padding: 0px !important; }
+		.bigger-button {
+			width: 25px;   /* 버튼의 너비를 설정 */
+			height: 25px;  /* 버튼의 높이를 설정 */
+			font-size: 16px;  /* 버튼 내부 글자 크기를 설정 */
+			text-align: center;	
+			font-weight: bold;
+		}
 
 		#contents .con_1 { padding: 30px 15px 15px 15px; }
 		.con_1 ul li { float: left; width: calc(25% - 11.25px); margin-left: 15px; text-align: center; background: #fff; height: 40px; line-height: 40px; font-weight: 500; cursor: pointer; font-size: 14px; -webkit-border-radius:3px; -moz-border-radius:3px; -o-border-radius:3px; -ms-border-radius:3px; border-radius:3px!important; }
@@ -120,8 +128,8 @@
 		.con_3 .con3_total .con3_total_l p { font-size: 12px; color: #000; }
 		.con_3 .con3_total .con3_total_l ul { margin-top: 10px; list-style-type: disc; padding-left: 15px; }
 		.con_3 .con3_total .con3_total_l ul li { font-size: 12px; color: #000; }
-		.con_3 .con3_total .con3_total_r { width: 40%; font-size: 12px; }
-		.con_3 .con3_total .con3_total_r ul { margin-top: 11px; }
+		.con_3 .con3_total .con3_total_r { width: 35%; font-size: 12px; }
+		.con_3 .con3_total .con3_total_r ul { margin-top: 2px; }
 		.con_3 .con3_total .con3_total_r ul li { *zoom: 1; margin-bottom: 5px; }
 		.con_3 .con3_total .con3_total_r ul li:after { content: ""; clear: both; display: block; }
 		.con_3 .con3_total .con3_total_r ul li span { float: right; height: 30px; line-height: 30px; margin-left: 5px; font-weight: bold; }
@@ -192,8 +200,8 @@
 			/* 총 결제금액 안내 폼 */
 			.con_3 .con3_total .con3_total_l { width: 100%; }
 			.con_3 .con3_total .con3_total_r { width: 100%; margin-top: 15px; }
-			.con_3 .con3_total .con3_total_r ul li span { width: 80px; text-align: right; }
-			.con_3 .con3_total .con3_total_r ul li input { margin-left: 15px; width: calc(100% - 125px); }
+			.con_3 .con3_total .con3_total_r ul li span { width: 150px; text-align: right; }
+			.con_3 .con3_total .con3_total_r ul li input { margin-left: 15px; width: calc(100% - 60%); }
 
 			/* 수취인 정보 입력 폼 */
 			.con_4 .con4_custinfo > div > div { width: 100%; }
@@ -211,70 +219,70 @@
 			<div id="contents">
 				<div class="line"></div>
 				<div class="con_2">
-					<p>주문하실 수량을 입력해주세요</p>
+					<p>구매 수량 계산기</p>
 					<div class="line"></div>
 					<ul class="child_height">
 						<li class="f_l">
 							<ul class="con2_size">
 								<li>
 									<span>폭 1m X 길이 1m</span>
-									<button type="button" class="br2px" onclick="delCount('testId11');">-</button>
-									<input type="text" name="" id="testId11" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId11');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId11');">-</button>
+									<input type="text" name="" id="testId11" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId11');">+</button>
 								</li>
 								<li>
 									<span>폭 1m X 길이 2m</span>
-									<button type="button" class="br2px" onclick="delCount('testId12');">-</button>
-									<input type="text" name="" id="testId12" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId12');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId12');">-</button>
+									<input type="text" name="" id="testId12" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId12');">+</button>
 								</li>
 								<li>
 									<span>폭 1m X 길이 3m</span>
-									<button type="button" class="br2px" onclick="delCount('testId13');">-</button>
-									<input type="text" name="" id="testId13" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId13');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId13');">-</button>
+									<input type="text" name="" id="testId13" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId13');">+</button>
 								</li>
 								<li>
 									<span>폭 1m X 길이 4m</span>
-									<button type="button" class="br2px" onclick="delCount('testId14');">-</button>
-									<input type="text" name="" id="testId14" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId14');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId14');">-</button>
+									<input type="text" name="" id="testId14" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId14');">+</button>
 								</li>
 								<li>
 									<span>폭 1m X 길이 5m</span>
-									<button type="button" class="br2px" onclick="delCount('testId15');">-</button>
-									<input type="text" name="" id="testId15" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId15');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId15');">-</button>
+									<input type="text" name="" id="testId15" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId15');">+</button>
 								</li>
 								<li>
 									<span>폭 1m X 길이 6m</span>
-									<button type="button" class="br2px" onclick="delCount('testId16');">-</button>
-									<input type="text" name="" id="testId16" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId16');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId16');">-</button>
+									<input type="text" name="" id="testId16" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId16');">+</button>
 								</li>
 								<li>
 									<span>폭 1m X 길이 7m</span>
-									<button type="button" class="br2px" onclick="delCount('testId17');">-</button>
-									<input type="text" name="" id="testId17" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId17');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId17');">-</button>
+									<input type="text" name="" id="testId17" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId17');">+</button>
 								</li>
 								<li>
 									<span>폭 1m X 길이 8m</span>
-									<button type="button" class="br2px" onclick="delCount('testId18');">-</button>
-									<input type="text" name="" id="testId18" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId18');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId18');">-</button>
+									<input type="text" name="" id="testId18" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId18');">+</button>
 								</li>
 								<li>
 									<span>폭 1m X 길이 9m</span>
-									<button type="button" class="br2px" onclick="delCount('testId19');">-</button>
-									<input type="text" name="" id="testId19" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId19');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId19');">-</button>
+									<input type="text" name="" id="testId19" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId19');">+</button>
 								</li>
 								<li>
 									<span>폭 1m X 길이 10m</span>
-									<button type="button" class="br2px" onclick="delCount('testId110');">-</button>
-									<input type="text" name="" id="testId110" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId110');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId110');">-</button>
+									<input type="text" name="" id="testId110" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p1');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId110');">+</button>
 								</li>
 							</ul>
 						</li>
@@ -282,63 +290,63 @@
 							<ul class="con2_size">
 								<li>
 									<span>폭 1.25m X 길이 1m</span>
-									<button type="button" class="br2px" onclick="delCount('testId21');">-</button>
-									<input type="text" name="" id="testId21" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId21');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId21');">-</button>
+									<input type="text" name="" id="testId21" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId21');">+</button>
 								</li>
 								<li>
 									<span>폭 1.25m X 길이 2m</span>
-									<button type="button" class="br2px" onclick="delCount('testId22');">-</button>
-									<input type="text" name="" id="testId22" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId22');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId22');">-</button>
+									<input type="text" name="" id="testId22" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId22');">+</button>
 								</li>
 								<li>
 									<span>폭 1.25m X 길이 3m</span>
-									<button type="button" class="br2px" onclick="delCount('testId23');">-</button>
-									<input type="text" name="" id="testId23" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId23');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId23');">-</button>
+									<input type="text" name="" id="testId23" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId23');">+</button>
 								</li>
 								<li>
 									<span>폭 1.25m X 길이 4m</span>
-									<button type="button" class="br2px" onclick="delCount('testId24');">-</button>
-									<input type="text" name="" id="testId24" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId24');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId24');">-</button>
+									<input type="text" name="" id="testId24" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId24');">+</button>
 								</li>
 								<li>
 									<span>폭 1.25m X 길이 5m</span>
-									<button type="button" class="br2px" onclick="delCount('testId25');">-</button>
-									<input type="text" name="" id="testId25" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId25');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId25');">-</button>
+									<input type="text" name="" id="testId25" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId25');">+</button>
 								</li>
 								<li>
 									<span>폭 1.25m X 길이 6m</span>
-									<button type="button" class="br2px" onclick="delCount('testId26');">-</button>
-									<input type="text" name="" id="testId26" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId26');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId26');">-</button>
+									<input type="text" name="" id="testId26" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId26');">+</button>
 								</li>
 								<li>
 									<span>폭 1.25m X 길이 7m</span>
-									<button type="button" class="br2px" onclick="delCount('testId27');">-</button>
-									<input type="text" name="" id="testId27" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId27');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId27');">-</button>
+									<input type="text" name="" id="testId27" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId27');">+</button>
 								</li>
 								<li>
 									<span>폭 1.25m X 길이 8m</span>
-									<button type="button" class="br2px" onclick="delCount('testId28');">-</button>
-									<input type="text" name="" id="testId28" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId28');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId28');">-</button>
+									<input type="text" name="" id="testId28" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId28');">+</button>
 								</li>
 								<li>
 									<span>폭 1.25m X 길이 9m</span>
-									<button type="button" class="br2px" onclick="delCount('testId29');">-</button>
-									<input type="text" name="" id="testId29" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId29');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId29');">-</button>
+									<input type="text" name="" id="testId29" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId29');">+</button>
 								</li>
 								<li>
 									<span>폭 1.25m X 길이 10m</span>
-									<button type="button" class="br2px" onclick="delCount('testId210');">-</button>
-									<input type="text" name="" id="testId210" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId210');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId210');">-</button>
+									<input type="text" name="" id="testId210" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p2');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId210');">+</button>
 								</li>
 							</ul>
 						</li>
@@ -346,39 +354,39 @@
 							<ul class="con2_size">
 								<li>
 									<span>폭 2.1m X 길이 1m</span>
-									<button type="button" class="br2px" onclick="delCount('testId31');">-</button>
-									<input type="text" name="" id="testId31" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId31');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId31');">-</button>
+									<input type="text" name="" id="testId31" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p3');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId31');">+</button>
 								</li>
 								<li>
 									<span>폭 2.1m X 길이 2m</span>
-									<button type="button" class="br2px" onclick="delCount('testId32');">-</button>
-									<input type="text" name="" id="testId32" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId32');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId32');">-</button>
+									<input type="text" name="" id="testId32" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p3');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId32');">+</button>
 								</li>
 								<li>
 									<span>폭 2.1m X 길이 3m</span>
-									<button type="button" class="br2px" onclick="delCount('testId33');">-</button>
-									<input type="text" name="" id="testId33" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId33');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId33');">-</button>
+									<input type="text" name="" id="testId33" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p3');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId33');">+</button>
 								</li>
 								<li>
 									<span>폭 2.1m X 길이 4m</span>
-									<button type="button" class="br2px" onclick="delCount('testId34');">-</button>
-									<input type="text" name="" id="testId34" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId34');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId34');">-</button>
+									<input type="text" name="" id="testId34" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p3');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId34');">+</button>
 								</li>
 								<li>
 									<span>폭 2.1m X 길이 5m</span>
-									<button type="button" class="br2px" onclick="delCount('testId35');">-</button>
-									<input type="text" name="" id="testId35" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId35');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId35');">-</button>
+									<input type="text" name="" id="testId35" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p3');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId35');">+</button>
 								</li>
 								<li>
 									<span>폭 2.1m X 길이 6m</span>
-									<button type="button" class="br2px" onclick="delCount('testId36');">-</button>
-									<input type="text" name="" id="testId36" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc();" />
-									<button type="button" class="br2px" onclick="addCount('testId36');">+</button>
+									<button type="button" class="br2px bigger-button" onclick="delCount('testId36');">-</button>
+									<input type="text" name="" id="testId36" maxlength="4" value="0" onkeyup="onlyNumber(this);itemCalc('p3');" />
+									<button type="button" class="br2px bigger-button" onclick="addCount('testId36');">+</button>
 								</li>
 							</ul>
 						</li>
@@ -388,10 +396,10 @@
 					<form id="EstiForm" name="EstiForm" method="post" action="">
 						<div class="con3_total child_height">
 							<div class="f_l con3_total_l">
-								<h3>총 구매 수량 계산기</h3>
 								<ul>
-									<li class="top_mt5 strong">계산기에 나온 수량대로 구매하시면 됩니다.</span></li>
-									<li class="top_mt5 strong">재단이 필요하면 배송 메모란에 재단 사이즈를 적어주세요. (폭/길이 무료재단)</li>
+									<li class="top_mt5 strong">위에 표에서 수량을 입력해 보시고, 계산기에 나온 수량대로 구매하시면 됩니다.</span></li>
+									<li class="top_mt5 strong">원하시는 재단 사이즈는 전부 <span style="color:red;">배송 메모란</span>에 기재 해주세요. (폭/길이 무료재단)</li>
+									<li class="top_mt5 strong">배송 메모란에 요청 사항이 없을시 기성 사이즈로 배송됩니다. (예 - 1m X 1m, 1.25m x 1m )</li>
 									<li class="top_mt5 strong">주문 방법이 어려우신 경우 <span style="color:red;">070-4693-5408</span> 으로 연락주세요.</li>
 								</ul>
 							</div>
@@ -402,11 +410,13 @@
 										<input type="text" value="" id="product1" readonly />
 										<span class="total_tit">폭 1m X 길이 1m</span>
 									</li>
+									<div class="line2"></div>
 									<li class="total_price">
 										<span>EA</span>
 										<input type="text" value="" id="product2" readonly />
 										<span class="total_tit">폭 1.25m X 길이 1m</span>
 									</li>
+									<div class="line2"></div>
 									<li class="total_price">
 										<span>EA</span>
 										<input type="text" value="" id="product3" readonly />
