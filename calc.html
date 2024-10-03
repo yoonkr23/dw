@@ -31,6 +31,7 @@
 		#contents > div > form > p { margin-bottom: 10px; color: #222; font-weight: bold; font-size: 16px; }
 		.line { border-top: 1px dotted #cbcbcb; margin: 0px 15px; padding: 0px !important; }
 		.line2 { border-top: 1px dotted #cbcbcb; margin: 4px 15px; padding: 0px !important; }
+		.line3 { border-top: 2px solid #cbcbcb; margin: 4px 15px; padding: 0px !important; }
 		.bigger-button {
 			width: 25px;   /* 버튼의 너비를 설정 */
 			height: 25px;  /* 버튼의 높이를 설정 */
@@ -48,8 +49,8 @@
 		.con_1 .con1_type li.select { background: #555; color: #fff; }
 
 		.con_2 { padding: 15px; }
-		.con_2 > ul > li:first-child { width: 33%; }
-		.con_2 > ul > li:last-child { width: 33%; }
+		/* .con_2 > ul > li:first-child { width: 33.3%; } */
+		.con_2 > ul > li:last-child { width: 33.3%; }
 		.con_2 .con2_typeinfo { width: 100%; height: 310px; position: relative; }
 		.con_2 .con2_typeinfo li { float: left; position: absolute; width: 100%; height: 100%; text-align: left; opacity:0; font-size: 18px; font-weight: 500; }
 		.con_2 .con2_typeinfo li:nth-child(1) { background: none; opacity: 1; }
@@ -63,7 +64,7 @@
 		.con_2 .con2_typeinfo li img { max-width: 100%; height: 310px; line-height: 0; vertical-align: top; }
 		.con_2 .con2_size { padding: 0px 15px 0px 30px; }
 		.con_2 .con2_size li { border-bottom: 1px solid #ddd; padding: 10.5px 0px; font-size: 14px; }
-		.con_2 .con2_size li:last-child { margin-bottom: 0px; }
+		.con_2 .con2_size li:last-child { margin-bottom: 0px; border-bottom: none}
 		.con_2 .con2_size li > span:first-child { width: 150px; font-weight: bold; }
 		.con_2 .con2_size li > span:last-child { width: 50px; font-weight: bold; }
 		.con_2 .con2_size li > input { width: 65px; text-align: right; }
@@ -132,11 +133,11 @@
 		.con_3 .con3_total .con3_total_r ul { margin-top: 2px; }
 		.con_3 .con3_total .con3_total_r ul li { *zoom: 1; margin-bottom: 5px; }
 		.con_3 .con3_total .con3_total_r ul li:after { content: ""; clear: both; display: block; }
-		.con_3 .con3_total .con3_total_r ul li span { float: right; height: 30px; line-height: 30px; margin-left: 5px; font-weight: bold; }
+		.con_3 .con3_total .con3_total_r ul li span { float: right; text-align: left; height: 30px; line-height: 30px; margin-left: 5px; font-weight: bold; }
 		.con_3 .con3_total .con3_total_r ul li span:first-child { width: 20px; }
 		.con_3 .con3_total .con3_total_r ul li input { float: right; text-align: right; width: 120px; margin-left: 5px; font-weight: bold; background: #f3f3f3; }
 		.con_3 .con3_total .con3_total_r ul li:last-child { margin: 0px; }
-		.con_3 .con3_total .con3_total_r .total_price { color: #000; font-size: 14px; }
+		.con_3 .con3_total .con3_total_r .total_price { color: #000; font-size: 13px; }
 		.con_3 .con3_total .con3_total_r .pay_qty { color: red; font-size: 14px; }
 
 		.con_4 .con4_custinfo { padding: 15px; background: #fff; }
@@ -173,7 +174,7 @@
 		}
 
 		/* 모바일 스타일 */
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 1000px) {
 			/* 1. 판종류 메뉴 */
 			.con_1 ul li { width: calc(33.3% - 6px); margin-left: 9px; }
 			.con_1 ul li:nth-child(4), 
@@ -183,8 +184,9 @@
 			.con_1 ul li:nth-child(n+4) { margin-top: 9px; }
 
 			/* 2. 판재 이미지 및 사이즈 입력 폼 */
-			.con_2 > ul > li:first-child { width: 100%; }
-			.con_2 > ul > li:last-child { width: 100%; }
+			.con_2 > ul > li { width: 100%;} */
+			.con_2 > ul > li:first-child { width: 100% !important;}
+			.con_2 > ul > li:last-child { width: 100% !important;}
 			.con_2 .con2_typeinfo { height: auto; }
 			.con_2 .con2_typeinfo li { height: auto; }
 			.con_2 .con2_typeinfo li img { width: 100%; max-width: 100%; height: auto; }
@@ -201,7 +203,7 @@
 			.con_3 .con3_total .con3_total_l { width: 100%; }
 			.con_3 .con3_total .con3_total_r { width: 100%; margin-top: 15px; }
 			.con_3 .con3_total .con3_total_r ul li span { width: 150px; text-align: right; }
-			.con_3 .con3_total .con3_total_r ul li input { margin-left: 15px; width: calc(100% - 60%); }
+			.con_3 .con3_total .con3_total_r ul li input { margin-left: 15px; width: calc(100% - 70%); }
 
 			/* 수취인 정보 입력 폼 */
 			.con_4 .con4_custinfo > div > div { width: 100%; }
@@ -220,9 +222,9 @@
 				<div class="line"></div>
 				<div class="con_2">
 					<p>구매 수량 계산기</p>
-					<div class="line"></div>
 					<ul class="child_height">
 						<li class="f_l">
+							<div class="line3"></div>		
 							<ul class="con2_size">
 								<li>
 									<span>폭 1m X 길이 1m</span>
@@ -287,6 +289,7 @@
 							</ul>
 						</li>
 						<li class="f_l">
+							<div class="line3"></div>
 							<ul class="con2_size">
 								<li>
 									<span>폭 1.25m X 길이 1m</span>
@@ -350,7 +353,9 @@
 								</li>
 							</ul>
 						</li>
+						
 						<li class="f_l">
+							<div class="line3"></div>
 							<ul class="con2_size">
 								<li>
 									<span>폭 2.1m X 길이 1m</span>
@@ -440,7 +445,7 @@
 	function addCount(id) {	
         let input = document.getElementById(id);
         let currentValue = parseInt(input.value);
-        input.value = isNaN(currentValue) ? 0 : currentValue + 1;
+        input.value = isNaN(currentValue) ? 1 : currentValue + 1;
 		
 		if(id.startsWith("testId1")) {
 			itemCalc('p1');	
@@ -454,7 +459,13 @@
     function delCount(id) {
         let input = document.getElementById(id);
         let currentValue = parseInt(input.value);
-        input.value = currentValue > 0 ? currentValue - 1 : 0;
+
+		if (currentValue == 1) {
+			input.value = "";
+		} else {
+			input.value = currentValue > 0 ? currentValue - 1 : "";
+		}
+         
 
 		if(id.startsWith("testId1")) {
 			itemCalc('p1');	
@@ -480,7 +491,7 @@
 
 			let sumValue = id1 + id2 + id3 + id4 + id5 + id6 + id7 + id8 + id9 + id10;
 			let result = sumValue/1
-			document.getElementById('product1').value = result;
+			document.getElementById('product1').value = result == 0 ? "" : result;
 		} else if (product == 'p2') {
 			let id1 = parseInt(!document.getElementById('testId21').value.trim()? 0 :document.getElementById('testId21').value )*1;
 			let id2 = parseInt(!document.getElementById('testId22').value.trim()? 0 :document.getElementById('testId22').value )*2;
@@ -495,7 +506,7 @@
 
 			let sumValue = id1 + id2 + id3 + id4 + id5 + id6 + id7 + id8 + id9 + id10;
 			let result = sumValue/1
-			document.getElementById('product2').value = result;
+			document.getElementById('product2').value = result == 0 ? "" : result;
 		} else if (product == 'p3') {
 			let id1 = parseInt(!document.getElementById('testId31').value.trim()? 0 :document.getElementById('testId31').value )*1;
 			let id2 = parseInt(!document.getElementById('testId32').value.trim()? 0 :document.getElementById('testId32').value )*2;
@@ -506,7 +517,7 @@
 
 			let sumValue = id1 + id2 + id3 + id4 + id5 + id6;
 			let result = sumValue/0.5
-			document.getElementById('product3').value = Math.round(result * 10) / 10;
+			document.getElementById('product3').value = result == 0 ? "" : Math.round(result * 10) / 10;
 		}
     }
 </script>
